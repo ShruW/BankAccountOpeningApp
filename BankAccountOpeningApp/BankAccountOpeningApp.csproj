@@ -71,6 +71,7 @@
     <Content Include="AccountOpeningForm.aspx" />
     <Content Include="AddCustomer.aspx" />
     <Content Include="CustomerPage.aspx" />
+    <Content Include="UpdateMyDetails.aspx" />
     <Content Include="Logout.aspx" />
     <Content Include="NewAccountNo.aspx" />
     <Content Include="EditCustomer.aspx" />
@@ -102,6 +103,13 @@
     </Compile>
     <Compile Include="CustomerPage.aspx.designer.cs">
       <DependentUpon>CustomerPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateMyDetails.aspx.cs">
+      <DependentUpon>UpdateMyDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateMyDetails.aspx.designer.cs">
+      <DependentUpon>UpdateMyDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Logout.aspx.cs">
       <DependentUpon>Logout.aspx</DependentUpon>

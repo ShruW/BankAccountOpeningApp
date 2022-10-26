@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddCustomer.aspx.cs" Inherits="BankAccountOpeningApp.AddCustomer" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UpdateMyDetails.aspx.cs" Inherits="BankAccountOpeningApp.UpdateMyDetails" %>
 
 <!DOCTYPE html>
 
@@ -9,15 +9,8 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="icon">
-            <img src="icon.jpg" style="height:60px;width:60px;"/>
-            <h2>ABC Bank Online Portal</h2>
-        </div>
-        <div style="float: right; width: 20%; font-size: 18px;text-align:right;margin-right:10px">
-                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Logout.aspx">Logout</asp:HyperLink>
-            </div>
-        <h4>Add New Customer</h4>
-        First Name:
+        <div>
+            First Name:
         <asp:TextBox ID="txtFirstName" runat="server"></asp:TextBox>
         <asp:RequiredFieldValidator ID="rfvtxtFirstName" ControlToValidate="txtFirstName" ErrorMessage="Please enter first name" runat="server"></asp:RequiredFieldValidator>
         <asp:RegularExpressionValidator ID="vtxtFirstName" ControlToValidate="txtFirstName" ValidationExpression="\w+[A-Za-z\s]+$" ErrorMessage="Please enter a valid first name" runat="server"></asp:RegularExpressionValidator>
@@ -51,23 +44,11 @@
         <asp:RequiredFieldValidator ID="rfvtxtEmail" ControlToValidate="txtEmail" ErrorMessage="Please enter Email" runat="server"></asp:RequiredFieldValidator>
         <br />
         <br />
-        Password: 
-        <asp:TextBox ID="txtPwd" runat="server" TextMode="Password"></asp:TextBox>
-        <asp:RequiredFieldValidator ID="rfvtxtPwd" ControlToValidate="txtPwd" ErrorMessage="Please enter password" runat="server"></asp:RequiredFieldValidator>
-        <br />
-        <br />
-        Confirm Password:
-        <asp:TextBox ID="txtConfirmPwd" runat="server" TextMode="Password"></asp:TextBox>
-        <asp:CompareValidator ID="vtxtPwd" runat="server" ControlToValidate="txtPwd" ControlToCompare="txtConfirmPwd" ErrorMessage="Please re-enter password"></asp:CompareValidator>
-        <br />
-        <br />
-        <asp:Button ID="btnAdd" runat="server" Text="Add Customer" OnClick="btnAdd_Click" />
-        <asp:Button ID="btnClear" runat="server" Text="Clear" OnClick="btnClear_Click" CausesValidation="false"/>
-        <br />
-        <asp:Label ID="lblMessage" runat="server" Width="300px"></asp:Label>
+        <asp:Button ID="btnUpdate" runat="server" Text="Update" OnClick="btnUpdate_Click"/>
+        </div>
     </form>
     <footer>
-        <a href="Help.html" runat="server">Need Help?</a>  
+        <a href="Help.html" runat="server">Need Help?</a>
     </footer>
 </body>
 </html>

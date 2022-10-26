@@ -20,7 +20,7 @@
         <br />
         <div>
             <div class="topNav">
-                <a href="" target="iframe">Change your details</a>
+                <a href="UpdateMyDetails.aspx" target="iframe">Update my details</a>
                 <a href="" target="iframe">Open New Account</a>
                 <a href="" target="iframe">Apply for card</a>
             </div>

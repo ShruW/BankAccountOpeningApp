@@ -19,27 +19,27 @@ namespace BankAccountOpeningApp
 
         protected void btnAdd_Click(object sender, EventArgs e)
         {
-            lblMessage.Text = "";
-            lblMessage.ForeColor = System.Drawing.Color.Red;
-            if (txtFirstName.Text == string.Empty)
-                lblMessage.Text += "<br/>Please enter first name.";
-            if (txtLastName.Text == string.Empty)
-                lblMessage.Text += "<br/>Please enter last name.";
-            if (txtDOB.Text == string.Empty)
-                lblMessage.Text += "<br/>Please enter date of birth.";
-            if (txtEmail.Text == string.Empty)
-                lblMessage.Text += "<br/>Please enter email.";
-            if (txtPhone.Text == string.Empty)
-                lblMessage.Text += "<br/>Please enter phone number.";
-            if (txtPwd.Text == string.Empty)
-                lblMessage.Text += "<br/>Please enter password";
+            //lblMessage.Text = "";
+            //lblMessage.ForeColor = System.Drawing.Color.Red;
+            //if (txtFirstName.Text == string.Empty)
+            //    lblMessage.Text += "<br/>Please enter first name.";
+            //if (txtLastName.Text == string.Empty)
+            //    lblMessage.Text += "<br/>Please enter last name.";
+            //if (txtDOB.Text == string.Empty)
+            //    lblMessage.Text += "<br/>Please enter date of birth.";
+            //if (txtEmail.Text == string.Empty)
+            //    lblMessage.Text += "<br/>Please enter email.";
+            //if (txtPhone.Text == string.Empty)
+            //    lblMessage.Text += "<br/>Please enter phone number.";
+            //if (txtPwd.Text == string.Empty)
+            //    lblMessage.Text += "<br/>Please enter password";
 
             int age=DateTime.Now.Year-Convert.ToDateTime(txtDOB.Text).Year;
             if (age <= 21 || age >= 100)
                 lblMessage.Text += "<br>Age should be between 21 and 100.";
 
-            if (lblMessage.Text==string.Empty)
-            {
+            //if (lblMessage.Text==string.Empty)
+            //{
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["conString"].ConnectionString);
                 SqlCommand cmd = new SqlCommand("AddCustomer", con);
                 cmd.CommandType=CommandType.StoredProcedure;
@@ -69,7 +69,7 @@ namespace BankAccountOpeningApp
                 {
                     Clear();
                 }
-            }
+            //}
         }
 
         protected void btnClear_Click(object sender, EventArgs e)

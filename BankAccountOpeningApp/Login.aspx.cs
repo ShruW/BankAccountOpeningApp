@@ -50,7 +50,8 @@ namespace BankAccountOpeningApp
                 //FormsAuthentication.RedirectFromLoginPage(cmd.Parameters["@Name"].Value.ToString(), Login1.RememberMeSet);
                 Response.Redirect("EditCustomer.aspx?value=" + cmd.Parameters["@Name"].Value.ToString());
             else if (result == 2)
-                Response.Redirect("CustomerPage.aspx?value=" + cmd.Parameters["@Name"].Value.ToString());
+                //Response.Redirect("CustomerPage.aspx?value=" + cmd.Parameters["@Name"].Value.ToString());
+                Response.Redirect("CustomerPage.aspx?userid=" + Login1.UserName);
         }
    
     }
