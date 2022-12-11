@@ -37,8 +37,6 @@ select * from Employee;
 
 exec ViewCustomer
 exec AddEditCustomer 'James','Kurtis','1990-04-12','M','np@gmail.com','9081168118'
- 
-select PWDENCRYPT('abc@123')=='abc@123'
 
 create table Employee(
 EmployeeId int primary key identity,
@@ -116,3 +114,20 @@ select FirstName,LastName,DOB,Gender,Email,Phone from Customer where ID=@Custome
 create or alter procedure GetCustIdFromEmail @Email varchar(20)--,@ID int out, @FirstName varchar(20) out
 as
 select ID,FirstName from Customer where Email=@Email
+
+ create or alter trigger BeforeTableAlter
+ on database
+ for Alter_Table
+ as
+ print 'Trigger initiated. cannot alter table'
+ rollback;
+
+ alter table Customer add Age int 
+
+ --CREATE TRIGGER FOR DML STATEMENTS
+ create trigger DeleteCustomer
+ on Customer
+ for delete
+ as
+ print 'Cannot delete Customer'
+ rollback;
